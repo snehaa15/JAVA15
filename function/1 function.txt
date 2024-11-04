@@ -1,0 +1,6 @@
+public static int findSmallest(int a, int b, int c) {
+    return Math.min(a, Math.min(b, c));
+}
+
+// Example usage:
+System.out.println(findSmallest(3, 5, 1)); // Output: 1

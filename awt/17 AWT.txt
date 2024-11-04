@@ -1,0 +1,17 @@
+import java.awt.*;
+
+public class TextAreaCustomLayoutExample extends Frame {
+    public TextAreaCustomLayoutExample() {
+        setLayout(null);
+        TextArea textArea = new TextArea("Enter text here");
+        textArea.setBounds(100, 100, 150, 100);
+        add(textArea);
+        
+        setSize(400, 300);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new TextAreaCustomLayoutExample();
+    }
+}

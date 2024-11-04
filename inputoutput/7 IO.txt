@@ -1,0 +1,5 @@
+
+       // 7. Enter the short integer from user using Scanner class
+        System.out.print("Enter a short integer: ");
+        short shortInteger = scanner.nextShort();
+        System.out.println("You entered: " + shortInteger); 

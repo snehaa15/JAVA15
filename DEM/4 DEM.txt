@@ -1,0 +1,38 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class RadioButtonDisplay {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Radio Button Selection");
+        JRadioButton rb1 = new JRadioButton("Option 1");
+        JRadioButton rb2 = new JRadioButton("Option 2");
+        
+        ButtonGroup group = new ButtonGroup();
+        group.add(rb1);
+        group.add(rb2);
+        
+        JLabel label = new JLabel("Selected: None");
+        
+        rb1.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                label.setText("Selected: Option 1");
+            }
+        });
+
+        rb2.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                label.setText("Selected: Option 2");
+            }
+        });
+
+        frame.setLayout(new java.awt.FlowLayout());
+        frame.add(rb1);
+        frame.add(rb2);
+        frame.add(label);
+        
+        frame.setSize(300, 200);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}

@@ -1,0 +1,4 @@
+   // 7. Convert String to double
+        String strToDouble = "123.456";
+        double doubleValue = Double.parseDouble(strToDouble);
+        System.out.println("String to double: " + doubleValue);

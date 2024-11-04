@@ -1,0 +1,24 @@
+package p3;
+
+public class Pkg10{
+public int age;
+public String name;
+void display(int age,String name){
+System.out.println("Age is : "+age+"   "+"Name is : "+name);
+}
+}
+
+class G extends Pkg10{
+public static void main(String[] args){
+G obj=new G();
+obj.display(21,"Abhinav");
+}
+}
+
+OUTPUT
+
+
+G:\Packages>javac -d G:\Packages Pkg10.java
+
+G:\Packages>java p3.G
+Age is : 21   Name is : Abhinav

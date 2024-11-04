@@ -1,0 +1,28 @@
+class Employee {
+    public void work() {
+        System.out.println("Employee working");
+    }
+
+    public double getSalary() {
+        return 50000;
+    }
+}
+
+class HRManager extends Employee {
+    @Override
+    public void work() {
+        System.out.println("HR Manager working");
+    }
+
+    public void addEmployee() {
+        System.out.println("Adding a new employee");
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        HRManager hr = new HRManager();
+        hr.work();
+        hr.addEmployee();
+    }
+}

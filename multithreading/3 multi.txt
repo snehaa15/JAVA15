@@ -1,0 +1,32 @@
+import java.util.Arrays;
+
+public class MultiThreadedSorting {
+    public static void main(String[] args) throws InterruptedException {
+        int[] array = {7, 2, 8, 3, 1, 6, 5, 4};
+        int mid = array.length / 2;
+
+        Thread sortFirstHalf = new Thread(() -> Arrays.sort(array, 0, mid));
+        Thread sortSecondHalf = new Thread(() -> Arrays.sort(array, mid, array.length));
+
+        sortFirstHalf.start();
+        sortSecondHalf.start();
+        sortFirstHalf.join();
+        sortSecondHalf.join();
+
+        int[] sortedArray = merge(array, mid);
+        System.out.println("Sorted Array: " + Arrays.toString(sortedArray));
+    }
+
+    private static int[] merge(int[] array, int mid) {
+        int[] merged = new int[array.length];
+        int i = 0, j = mid, k = 0;
+
+        while (i < mid && j < array.length) {
+            if (array[i] < array[j]) merged[k++] = array[i++];
+            else merged[k++] = array[j++];
+        }
+        while (i < mid) merged[k++] = array[i++];
+        while (j < array.length) merged[k++] = array[j++];
+        return merged;
+    }
+}

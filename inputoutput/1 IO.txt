@@ -1,0 +1,11 @@
+import java.io.*;
+import java.util.Scanner;
+
+public class UserInputExamples {
+
+    public static void main(String[] args) throws IOException {
+        // 1. Enter the character from user using InputStreamReader
+        InputStreamReader inputStreamReader = new InputStreamReader(System.in);
+        System.out.print("Enter a character: ");
+        char character = (char) inputStreamReader.read();
+        System.out.println("You entered: " + character);

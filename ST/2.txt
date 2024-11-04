@@ -1,0 +1,22 @@
+class Str2 {
+    public static String deepCopyString(String original) {
+        return new String(original);
+    }
+
+    public static void main(String[] args) {
+        String original = "Hello, World!";
+        String copy = deepCopyString(original);
+
+        // Let's modify the original string to demonstrate the deep copy
+        original += " Modified";
+
+        System.out.println("Original: " + original);
+        System.out.println("Copy: " + copy);
+    }
+}
+
+OUTPUT
+
+
+Original: Hello, World! Modified
+Copy: Hello, World!

@@ -1,0 +1,13 @@
+public class ThrowsKeywordExample {
+    public static void riskyMethod() throws Exception {
+        throw new Exception("Exception thrown by riskyMethod");
+    }
+
+    public static void main(String[] args) {
+        try {
+            riskyMethod();
+        } catch (Exception e) {
+            System.out.println("Caught exception: " + e.getMessage());
+        }
+    }
+}

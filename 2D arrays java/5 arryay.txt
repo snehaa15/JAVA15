@@ -1,0 +1,63 @@
+import java.util.Scanner;
+
+public class MatrixEquality {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter number of rows: ");
+        int rows = scanner.nextInt();
+        System.out.print("Enter number of columns: ");
+        int cols = scanner.nextInt();
+        
+        int[][] matrix1 = new int[rows][cols];
+        int[][] matrix2 = new int[rows][cols];
+        
+        System.out.println("Enter elements of first matrix:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                matrix1[i][j] = scanner.nextInt();
+            }
+        }
+        
+        System.out.println("Enter elements of second matrix:");
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                matrix2[i][j] = scanner.nextInt();
+            }
+        }
+        
+        // Check equality
+        boolean isEqual = true;
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                if (matrix1[i][j] != matrix2[i][j]) {
+                    isEqual = false;
+                    break;
+                }
+            }
+            if (!isEqual) break;
+        }
+        
+        System.out.println("The matrices are " + (isEqual ? "equal" : "not equal"));
+    }
+}
+
+
+
+
+OUTPUT
+
+
+
+Enter number of rows: 2
+Enter number of columns: 2
+Enter elements of first matrix:
+1 2
+3 4
+Enter elements of second matrix:
+1 2
+3 4
+The matrices are equal
+
+
+
+

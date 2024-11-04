@@ -1,0 +1,70 @@
+class TrafficLight {
+    private String color;
+    private int duration;
+
+    // Constructor
+    public TrafficLight(String color, int duration) {
+        this.color = color;
+        this.duration = duration;
+    }
+
+    // Getters
+    public String getColor() {
+        return color;
+    }
+
+    public int getDuration() {
+        return duration;
+    }
+
+    // Method to change the color
+    public void changeColor(String newColor) {
+        this.color = newColor;
+    }
+
+    // Method to check if the color is red
+    public boolean isRed() {
+        return color.equalsIgnoreCase("red");
+    }
+
+    // Method to check if the color is green
+    public boolean isGreen() {
+        return color.equalsIgnoreCase("green");
+    }
+
+    // Method to print traffic light details
+    public void printTrafficLightDetails() {
+        System.out.println("Color: " + color);
+        System.out.println("Duration: " + duration + " seconds");
+    }
+
+    // Main method to test the TrafficLight class
+    public static void main(String[] args) {
+        TrafficLight trafficLight = new TrafficLight("red", 30);
+
+        // Print traffic light details
+        trafficLight.printTrafficLightDetails();
+
+        // Change the color to green
+        trafficLight.changeColor("green");
+
+        // Print updated traffic light details
+        trafficLight.printTrafficLightDetails();
+
+        // Check if the color is red
+        System.out.println("Is the color red? " + trafficLight.isRed());
+
+        // Check if the color is green
+        System.out.println("Is the color green? " + trafficLight.isGreen());
+    }
+}
+
+OUTPUT
+
+
+Color: red
+Duration: 30 seconds
+Color: green
+Duration: 30 seconds
+Is the color red? false
+Is the color green? true

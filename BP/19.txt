@@ -1,0 +1,15 @@
+class BPr19{
+    public static void main(String[] args) {
+        int totalSeconds = 3725; 
+        int hours = totalSeconds / 3600;
+        int remainingSeconds = totalSeconds % 3600;
+        int minutes = remainingSeconds / 60;
+        int seconds = remainingSeconds % 60;
+System.out.println("The time is: " + hours + " hour(s), " + minutes + " minute(s), and " + seconds + " second(s).");
+    }
+}
+
+OUTPUT
+
+
+The time is: 1 hour(s), 2 minute(s), and 5 second(s).

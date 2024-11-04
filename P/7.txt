@@ -1,0 +1,24 @@
+package p4;
+
+public class Pkg8{
+protected int age;
+protected String name;
+void display(int age,String name){
+System.out.println("Age is : "+age+"   "+"Name is : "+name);
+}
+}
+
+class G extends Pkg8{
+public static void main(String[] args){
+G obj=new G();
+obj.display(21,"Abhinav");
+}
+}
+
+OUTPUT
+
+
+G:\Packages>javac -d G:\Packages Pkg8.java
+
+G:\Packages>java p4.G
+Age is : 21   Name is : Abhinav

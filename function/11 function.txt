@@ -1,0 +1,10 @@
+public static boolean areConsecutive(int a, int b, int c) {
+    int[] nums = {a, b, c};
+    Arrays.sort(nums);
+    return nums[1] - nums[0] == 1 && nums[2] - nums[1] == 1;
+}
+
+// Example usage:
+System.out.println(areConsecutive(4, 5, 6)); // Output: true
+System.out.println(areConsecutive(1, 3, 2)); // Output: true
+System.out.println(areConsecutive(4, 6, 7)); // Output: false

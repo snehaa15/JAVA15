@@ -1,0 +1,60 @@
+package c4.sample;
+public class SampleClass {
+    
+protected int protectedNumber;
+
+       
+public SampleClass(int number){
+        
+this.protectedNumber = number;
+    }
+
+     
+public void display() {
+        
+System.out.println("Protected Number: " + protectedNumber);
+}
+}
+----------------------------------------------------------------------
+package c4;
+
+
+import c4.sample.SampleClass;
+
+
+public class AccessSampleClass extends SampleClass{
+
+   
+    
+public AccessSampleClass(int number){
+        
+super(number);
+}
+
+    
+public void accessProtectedMember(){
+            
+System.out.println("Accessing protected member: " + protectedNumber);
+}
+
+    
+public static void main(String[] args){
+              
+AccessSampleClass accessSample = new AccessSampleClass(42);
+
+             
+accessSample.accessProtectedMember();
+
+             
+accessSample.display();
+}
+}
+
+OUTPUT
+
+
+G:\>javac -d G:\ SampleClass.java
+G:\>javac -d G:\ AccessSampleClass.java
+G:\>java c4.AccessSampleClass
+Accessing protected member: 42
+Protected Number: 42

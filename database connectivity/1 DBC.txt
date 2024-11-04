@@ -1,0 +1,45 @@
+import java.sql.*;
+import java.util.Scanner;
+
+public class DatabaseOperations {
+    private static final String URL = "jdbc:mysql://localhost:3306/mydatabase";
+    private static final String USER = "root";
+    private static final String PASSWORD = "password";
+
+    // 1. Establish Connection and Manage Driver
+    public static Connection connect() throws SQLException {
+        return DriverManager.getConnection(URL, USER, PASSWORD);
+    }
+
+    public static void main(String[] args) {
+        try (Connection connection = connect()) {
+            System.out.println("Connected to the database.");
+
+            // 2. Create a table in the database
+            createTable(connection);
+
+            // 3. Insert a row into the table
+            insertRow(connection, 1, "John Doe", 30);
+
+            // 4. Update a row in the table
+            updateRow(connection, 1, "Jane Doe");
+
+            // 5. Delete a row in the table
+            deleteRow(connection, 1);
+
+            // 6. Select multiple rows and display results
+            selectRows(connection);
+
+            // 7. Scrollable ResultSet - Display a specific row
+            displayRowByNumber(connection);
+
+            // 8. Scrollable Updatable ResultSet - Insert, Update, Delete
+            scrollableUpdatableResultSet(connection);
+
+            // 9. PreparedStatement - Insert, Update, Delete
+            preparedStatementOperations(connection);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }

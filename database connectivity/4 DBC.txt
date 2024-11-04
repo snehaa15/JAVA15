@@ -1,0 +1,11 @@
+ 
+    // 4. Update Row
+    private static void updateRow(Connection connection, int id, String newName) throws SQLException {
+        String sql = "UPDATE users SET name = ? WHERE id = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
+            pstmt.setString(1, newName);
+            pstmt.setInt(2, id);
+            pstmt.executeUpdate();
+            System.out.println("Row updated.");
+        }
+    }

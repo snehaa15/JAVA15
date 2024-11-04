@@ -1,0 +1,55 @@
+// Define the Flyable interface with the fly_obj method
+interface Flyable {
+    // Method to be implemented by classes that implement this interface
+    void fly_obj();
+}
+
+// Define the Spacecraft class that implements Flyable
+class Spacecraft implements Flyable {
+    // Implement the fly_obj method for Spacecraft
+    @Override
+    public void fly_obj() {
+        System.out.println("Spacecraft is flying in space.");
+    }
+}
+
+// Define the Airplane class that implements Flyable
+class Airplane implements Flyable {
+    // Implement the fly_obj method for Airplane
+    @Override
+    public void fly_obj() {
+        System.out.println("Airplane is flying in the sky.");
+    }
+}
+
+// Define the Helicopter class that implements Flyable
+class Helicopter implements Flyable {
+    // Implement the fly_obj method for Helicopter
+    @Override
+    public void fly_obj() {
+        System.out.println("Helicopter is hovering and flying in the air.");
+    }
+}
+
+// Main class to test the implementation
+class Main {
+    public static void main(String[] args) {
+        // Create instances of Spacecraft, Airplane, and Helicopter
+        Flyable spacecraft = new Spacecraft();
+        Flyable airplane = new Airplane();
+        Flyable helicopter = new Helicopter();
+
+        // Call the fly_obj method for each instance
+        spacecraft.fly_obj();
+        airplane.fly_obj();
+        helicopter.fly_obj();
+    }
+}
+
+
+OUTPUT
+
+
+Spacecraft is flying in space.
+Airplane is flying in the sky.
+Helicopter is hovering and flying in the air.

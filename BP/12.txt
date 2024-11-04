@@ -1,0 +1,33 @@
+class BPr12{
+  public static void main(String[] args) {
+    String input = "Hello, World! 123";
+    System.out.println("Input string: " + input);
+    int letterCount = 0;
+    int spaceCount = 0;
+    int numberCount = 0;
+    int otherCount = 0;
+    for (int i = 0; i < input.length(); i++) {
+      char c = input.charAt(i);
+      if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')) {
+        letterCount++;
+      } else if (c == ' ' || c == '\t' || c == '\n' || c == '\r') {
+        spaceCount++;
+      } else if (c >= '0' && c <= '9') {
+        numberCount++;
+      } else {
+        otherCount++;
+      }}
+    System.out.println("Letters: " + letterCount);
+    System.out.println("Spaces: " + spaceCount);
+    System.out.println("Numbers: " + numberCount);
+    System.out.println("Other characters: " + otherCount);
+  }}
+
+OUTPUT
+
+
+Input string: Hello, World! 123
+Letters: 10
+Spaces: 2
+Numbers: 3
+Other characters: 2

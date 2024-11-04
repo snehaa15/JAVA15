@@ -1,0 +1,19 @@
+import java.awt.*;
+
+public class ChoiceFlowLayoutExample extends Frame {
+    public ChoiceFlowLayoutExample() {
+        setLayout(new FlowLayout());
+        Choice choice = new Choice();
+        choice.add("Option 1");
+        choice.add("Option 2");
+        choice.add("Option 3");
+        add(choice);
+        
+        setSize(300, 200);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new ChoiceFlowLayoutExample();
+    }
+}

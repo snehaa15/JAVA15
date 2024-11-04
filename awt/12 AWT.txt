@@ -1,0 +1,19 @@
+import java.awt.*;
+
+public class CheckboxGroupFlowLayoutExample extends Frame {
+    public CheckboxGroupFlowLayoutExample() {
+        setLayout(new FlowLayout());
+        CheckboxGroup group = new CheckboxGroup();
+        Checkbox option1 = new Checkbox("Option 1", group, false);
+        Checkbox option2 = new Checkbox("Option 2", group, false);
+        add(option1);
+        add(option2);
+        
+        setSize(300, 200);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new CheckboxGroupFlowLayoutExample();
+    }
+}

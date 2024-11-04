@@ -1,0 +1,4 @@
+ // 16. Convert long to int
+        long longToIntValue = 500L;
+        int intFromLong = (int) longToIntValue; // explicit casting
+        System.out.println("Long to int: " + intFromLong);

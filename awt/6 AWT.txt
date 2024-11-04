@@ -1,0 +1,16 @@
+import java.awt.*;
+
+public class CheckboxFlowLayoutExample extends Frame {
+    public CheckboxFlowLayoutExample() {
+        setLayout(new FlowLayout());
+        Checkbox checkbox = new Checkbox("I agree");
+        add(checkbox);
+        
+        setSize(300, 200);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new CheckboxFlowLayoutExample();
+    }
+}

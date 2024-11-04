@@ -1,0 +1,21 @@
+class Str4{
+    public static String removeCharacter(String input, char c) {
+        return input.replace(String.valueOf(c), "");
+    }
+
+    public static void main(String[] args) {
+        String input = "Hello, World!";
+        char c = 'o';
+        String result = removeCharacter(input, c);
+        System.out.println("Input: " + input);
+        System.out.println("Character to remove: " + c);
+        System.out.println("Result: " + result);
+    }
+}
+
+OUTPUT
+
+
+Input: Hello, World!
+Character to remove: o
+Result: Hell, Wrld!

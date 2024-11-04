@@ -1,0 +1,52 @@
+class Rectangle {
+    private double width;
+    private double height;
+
+    // Constructor
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    // Getters
+    public double getWidth() {
+        return width;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+
+    // Calculate area
+    public double calculateArea() {
+        return width * height;
+    }
+
+    // Calculate perimeter
+    public double calculatePerimeter() {
+        return 2 * (width + height);
+    }
+}
+
+class C {
+    public static void main(String[] args) {
+        // Create a Rectangle instance
+        Rectangle rectangle = new Rectangle(5.0, 3.0);
+
+        // Print the attributes of the rectangle
+        System.out.println("Width: " + rectangle.getWidth());
+        System.out.println("Height: " + rectangle.getHeight());
+
+        // Calculate and print the area and perimeter
+        System.out.println("Area: " + rectangle.calculateArea());
+        System.out.println("Perimeter: " + rectangle.calculatePerimeter());
+    }
+}
+
+OUTPUT
+
+
+Width: 5.0
+Height: 3.0
+Area: 15.0
+Perimeter: 16.0

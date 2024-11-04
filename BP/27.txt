@@ -1,0 +1,18 @@
+class BPr27 {
+    public static void main(String[] args) {
+        double radius = 5.0; // example input
+        double area = calculateCircleArea(radius);
+        System.out.println("Area of circle with radius " + radius + ": " + area);
+    }
+
+    public static double calculateCircleArea(double radius) {
+        final double PI = 3.14159; // approximate value of pi
+        double area = PI * radius * radius;
+        return area;
+    }
+}
+
+OUTPUT
+
+
+Area of circle with radius 5.0: 78.53975

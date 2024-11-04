@@ -1,0 +1,19 @@
+class BPr14 {
+public static void main(String[] args) {
+    System.out.print("Enter an integer: ");
+    String input = System.console().readLine();
+    int n = Integer.parseInt(input);
+    String nnStr = "" + n + n;
+    int nn = Integer.parseInt(nnStr);
+    String nnnStr = "" + nn + n;
+    int nnn = Integer.parseInt(nnnStr);
+    int result = n + nn + nnn;
+    System.out.println("The value of n+nn+nnn is: " + result);
+  }
+}
+
+OUTPUT
+
+
+Enter an integer: 123
+The value of n+nn+nnn is: 123246369

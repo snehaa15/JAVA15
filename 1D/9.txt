@@ -1,0 +1,17 @@
+class Arr9{
+public static void main(String[] args){
+int arr[]={10,20,40,120,45,70,150};
+System.out.println("Printing Largest Element of a Array : ");
+int max=arr[0];
+for(int i = 1 ; i < arr.length ; i++){
+if(arr[i]>max){
+max=arr[i];
+}}
+System.out.println(max);
+}}
+
+OUTPUT
+
+
+Printing Largest Element of a Array :
+150

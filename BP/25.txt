@@ -1,0 +1,24 @@
+class BPr25 {
+    public static void main(String[] args) {
+        int a = 5; // example input
+        int b = 7; // example input
+
+        int sum = addWithoutArithmetic(a, b);
+
+        System.out.println("Sum of " + a + " and " + b + ": " + sum);
+    }
+
+    public static int addWithoutArithmetic(int a, int b) {
+        while (b != 0) {
+            int carry = a & b;
+            a = a ^ b;
+            b = carry << 1;
+        }
+        return a;
+    }
+}
+
+OUTPUT
+
+
+Sum of 5 and 7: 12

@@ -1,0 +1,17 @@
+class Str12{
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+        int charCount = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            charCount++;
+        }
+
+        System.out.println("Total number of characters: " + charCount);
+    }
+}
+
+OUTPUT
+
+
+Total number of characters: 13

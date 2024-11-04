@@ -1,0 +1,17 @@
+import java.awt.*;
+import java.awt.event.*;
+
+public class ButtonFlowLayoutExample extends Frame {
+    public ButtonFlowLayoutExample() {
+        setLayout(new FlowLayout());
+        Button button = new Button("Click Me");
+        add(button);
+        
+        setSize(300, 200);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new ButtonFlowLayoutExample();
+    }
+}

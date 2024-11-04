@@ -1,0 +1,4 @@
+        // 8. Convert double to String
+        double doubleToStr = 789.1011;
+        String doubleToString = Double.toString(doubleToStr);
+        System.out.println("Double to String: " + doubleToString);

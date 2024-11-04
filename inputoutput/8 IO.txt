@@ -1,0 +1,4 @@
+// 8. Enter the long integer from user using Scanner class
+        System.out.print("Enter a long integer: ");
+        long longInteger = scanner.nextLong();
+        System.out.println("You entered: " + longInteger);

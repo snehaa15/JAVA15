@@ -1,0 +1,4 @@
+    // 3. Convert String to long
+        String strToLong = "123456789";
+        long longValue = Long.parseLong(strToLong);
+        System.out.println("String to long: " + longValue);

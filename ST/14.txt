@@ -1,0 +1,28 @@
+class Str14 {
+    public static void main(String[] args) {
+        String str = "Hello, World!";
+        int vowelCount = 0;
+        int consonantCount = 0;
+
+        for (int i = 0; i < str.length(); i++) {
+            char c = str.charAt(i);
+            if (Character.isLetter(c)) {
+                String lowerCaseChar = String.valueOf(c).toLowerCase();
+                if (lowerCaseChar.equals("a") || lowerCaseChar.equals("e") || lowerCaseChar.equals("i") || lowerCaseChar.equals("o") || lowerCaseChar.equals("u")) {
+                    vowelCount++;
+                } else {
+                    consonantCount++;
+                }
+            }
+        }
+
+        System.out.println("Total number of vowels: " + vowelCount);
+        System.out.println("Total number of consonants: " + consonantCount);
+    }
+}
+
+OUTPUT
+
+
+Total number of vowels: 3
+Total number of consonants: 7

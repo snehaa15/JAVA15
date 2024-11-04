@@ -1,0 +1,20 @@
+class BPr8 {
+  public static void main(String[] args) {
+    String binary = "1100";
+    int decimal = 0;
+    System.out.println("Binary: " + binary);
+    for (int i = 0; i < binary.length(); i++) {
+      char bit = binary.charAt(binary.length() - 1 - i);
+      if (bit == '1') {
+        decimal += Math.pow(2, i);
+      }
+    }
+    System.out.println("Decimal: " + decimal);
+  }
+}
+
+OUTPUT
+
+
+Binary: 1100
+Decimal: 12

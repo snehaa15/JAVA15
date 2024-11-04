@@ -1,0 +1,4 @@
+  // 18. Convert double to int
+        double doubleToIntValue = 300.99;
+        int intFromDouble = (int) doubleToIntValue; // explicit casting
+        System.out.println("Double to int: " + intFromDouble);

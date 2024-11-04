@@ -1,0 +1,19 @@
+class Str11 {
+    public static void main(String[] args) {
+        String str = "Hello world, this is a test string";
+        System.out.println(str);
+        // Split the string into an array using whitespace as a delimiter
+        String[] words = str.split("\\s+");
+        
+        // Count the number of words in the array
+        int wordCount = words.length;
+
+        System.out.println("Number of words: " + wordCount);
+    }
+}
+
+OUTPUT
+
+
+Hello world, this is a test string
+Number of words: 7

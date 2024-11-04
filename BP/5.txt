@@ -1,0 +1,12 @@
+class BPr5{
+public static void main(String[] args){
+int a=20,b=20,c=20,d=20,e=20;
+int avg=(a+b+c+d+e)/5;
+System.out.println("Average of 5 numbers is : "+avg);
+}
+}
+
+OUTPUT
+
+
+Average of 5 numbers is : 20

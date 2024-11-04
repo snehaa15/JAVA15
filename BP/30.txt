@@ -1,0 +1,19 @@
+class BPr30{
+    public static void main(String[] args) {
+        double sideLength = 5.0; // example input
+
+        double area = calculateEquilateralTriangleArea(sideLength);
+
+        System.out.println("Area of equilateral triangle with side length " + sideLength + ": " + area);
+    }
+
+    public static double calculateEquilateralTriangleArea(double sideLength) {
+        double area = (Math.sqrt(3) / 4) * sideLength * sideLength;
+        return area;
+    }
+}
+
+OUTPUT
+
+
+Area of equilateral triangle with side length 5.0: 10.825317547305481

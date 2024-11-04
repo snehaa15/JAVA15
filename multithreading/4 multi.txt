@@ -1,0 +1,53 @@
+public class MatrixMultiplication {
+    static int[][] result;
+
+    public static void main(String[] args) throws InterruptedException {
+        int[][] matrixA = { {1, 2}, {3, 4} };
+        int[][] matrixB = { {5, 6}, {7, 8} };
+        result = new int[matrixA.length][matrixB[0].length];
+
+        Thread[][] threads = new Thread[matrixA.length][matrixB[0].length];
+
+        for (int i = 0; i < matrixA.length; i++) {
+            for (int j = 0; j < matrixB[0].length; j++) {
+                threads[i][j] = new Thread(new MultiplyTask(matrixA, matrixB, i, j));
+                threads[i][j].start();
+            }
+        }
+
+        for (Thread[] row : threads) {
+            for (Thread thread : row) {
+                thread.join();
+            }
+        }
+
+        System.out.println("Result Matrix:");
+        for (int[] row : result) {
+            for (int value : row) {
+                System.out.print(value + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    static class MultiplyTask implements Runnable {
+        int[][] matrixA, matrixB;
+        int row, col;
+
+        MultiplyTask(int[][] matrixA, int[][] matrixB, int row, int col) {
+            this.matrixA = matrixA;
+            this.matrixB = matrixB;
+            this.row = row;
+            this.col = col;
+        }
+
+        @Override
+        public void run() {
+            int sum = 0;
+            for (int k = 0; k < matrixA[0].length; k++) {
+                sum += matrixA[row][k] * matrixB[k][col];
+            }
+            result[row][col] = sum;
+        }
+    }
+}

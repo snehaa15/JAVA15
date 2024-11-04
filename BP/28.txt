@@ -1,0 +1,20 @@
+class BPr28{
+    public static void main(String[] args) {
+        double length = 5.0; // example input
+        double width = 3.0; // example input
+
+        double area = calculateRectangleArea(length, width);
+
+        System.out.println("Area of rectangle with length " + length + " and width " + width + ": " + area);
+    }
+
+    public static double calculateRectangleArea(double length, double width) {
+        double area = length * width;
+        return area;
+    }
+}
+
+OUTPUT
+
+
+Area of rectangle with length 5.0 and width 3.0: 15.0

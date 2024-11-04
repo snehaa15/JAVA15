@@ -1,0 +1,22 @@
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.util.Scanner;
+
+public class EmptyFileExceptionExample {
+    public static void checkFileEmpty(String filename) throws Exception {
+        File file = new File(filename);
+        Scanner scanner = new Scanner(file);
+        if (!scanner.hasNext()) {
+            throw new Exception("File is empty");
+        }
+        scanner.close();
+    }
+
+    public static void main(String[] args) {
+        try {
+            checkFileEmpty("emptyFile.txt");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}

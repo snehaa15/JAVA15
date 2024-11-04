@@ -1,0 +1,35 @@
+class Person {
+    private String name;
+    private int age;
+
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+}
+
+class A {
+    public static void main(String[] args) {
+        // Create two instances of the Person class
+        Person person1 = new Person("John Doe", 30);
+        Person person2 = new Person("Jane Doe", 25);
+
+        // Print the attributes of each person
+        System.out.println("Person 1: " + person1.getName() + ", " + person1.getAge() + " years old");
+        System.out.println("Person 2: " + person2.getName() + ", " + person2.getAge() + " years old");
+    }
+}
+
+OUTPUT
+
+
+Person 1: John Doe, 30 years old
+Person 2: Jane Doe, 25 years old

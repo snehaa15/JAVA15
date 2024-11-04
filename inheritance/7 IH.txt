@@ -1,0 +1,29 @@
+class Person {
+    public String getFirstName() {
+        return "John";
+    }
+
+    public String getLastName() {
+        return "Doe";
+    }
+}
+
+class Employee extends Person {
+    private String employeeId = "E123";
+
+    public String getEmployeeId() {
+        return employeeId;
+    }
+
+    @Override
+    public String getLastName() {
+        return super.getLastName() + ", Software Engineer";
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Employee emp = new Employee();
+        System.out.println(emp.getFirstName() + " " + emp.getLastName());
+    }
+}

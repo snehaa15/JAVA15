@@ -1,0 +1,36 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class FrameSwitcher {
+    public static void main(String[] args) {
+        JFrame frame1 = new JFrame("Frame 1");
+        JFrame frame2 = new JFrame("Frame 2");
+        
+        JButton switchButton = new JButton("Switch to Frame 2");
+
+        switchButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                frame1.setVisible(false);
+                frame2.setVisible(true);
+            }
+        });
+
+        frame1.add(switchButton);
+        frame1.setSize(300, 200);
+        frame1.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame1.setVisible(true);
+        
+        JButton switchBackButton = new JButton("Switch to Frame 1");
+        switchBackButton.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                frame2.setVisible(false);
+                frame1.setVisible(true);
+            }
+        });
+
+        frame2.add(switchBackButton);
+        frame2.setSize(300, 200);
+        frame2.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+}

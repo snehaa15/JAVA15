@@ -1,0 +1,11 @@
+   // 2. Create Table
+    private static void createTable(Connection connection) throws SQLException {
+        String sql = "CREATE TABLE IF NOT EXISTS users (" +
+                "id INT PRIMARY KEY, " +
+                "name VARCHAR(50), " +
+                "age INT)";
+        try (Statement stmt = connection.createStatement()) {
+            stmt.executeUpdate(sql);
+            System.out.println("Table created.");
+        }
+    }

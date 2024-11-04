@@ -1,0 +1,4 @@
+ // 19. Convert char to int
+        char charToInt = 'A';
+        int intFromChar = (int) charToInt; // ASCII/Unicode value
+        System.out.println("Char to int: " + intFromChar);

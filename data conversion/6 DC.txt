@@ -1,0 +1,5 @@
+
+        // 6. Convert float to String
+        float floatToStr = 56.78f;
+        String floatToString = Float.toString(floatToStr);
+        System.out.println("Float to String: " + floatToString);

@@ -1,0 +1,62 @@
+class Circle {
+    private double radius;
+
+    // Constructor
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    // Getter
+    public double getRadius() {
+        return radius;
+    }
+
+    // Setter
+    public void setRadius(double radius) {
+        this.radius = radius;
+    }
+
+    // Calculate area
+    public double calculateArea() {
+        return Math.PI * Math.pow(radius, 2);
+    }
+
+    // Calculate circumference
+    public double calculateCircumference() {
+        return 2 * Math.PI * radius;
+    }
+}
+
+class D{
+public static void main(String[] args) {
+        // Create a Circle instance
+        Circle circle = new Circle(5.0);
+
+        // Print the initial radius of the circle
+        System.out.println("Initial Radius: " + circle.getRadius());
+
+        // Calculate and print the initial area and circumference
+        System.out.println("Initial Area: " + circle.calculateArea());
+        System.out.println("Initial Circumference: " +                 circle.calculateCircumference());
+
+        // Modify the radius using the setter method
+        circle.setRadius(7.0);
+
+        // Print the updated radius of the circle
+        System.out.println("Updated Radius: " + circle.getRadius());
+
+        // Calculate and print the updated area and circumference
+        System.out.println("Updated Area: " + circle.calculateArea());
+        System.out.println("Updated Circumference: " +                 circle.calculateCircumference());
+    }
+}
+
+OUTPUT
+
+
+Initial Radius: 5.0
+Initial Area: 78.53981633974483
+Initial Circumference: 31.41592653589793
+Updated Radius: 7.0
+Updated Area: 153.93804002589985
+Updated Circumference: 43.982297150257104

@@ -1,0 +1,12 @@
+class BPr15{
+  public static void main(String[] args) {
+    long currentTime = System.currentTimeMillis();
+    java.util.Date date = new java.util.Date(currentTime);
+    System.out.println("The current system time is: " + date);
+  }
+}
+
+OUTPUT
+
+
+The current system time is: Fri Sep 13 20:31:37 IST 2024

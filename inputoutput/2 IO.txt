@@ -1,0 +1,5 @@
+ // 2. Enter the string from user using BufferedReader
+        BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(System.in));
+        System.out.print("Enter a string: ");
+        String string = bufferedReader.readLine();
+        System.out.println("You entered: " + string);

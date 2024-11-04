@@ -1,0 +1,9 @@
+ // 9. Get all characters from the file and display on the screen
+        File file = new File("example.txt");
+        BufferedReader fileReader = new BufferedReader(new FileReader(file));
+        String line;
+        System.out.println("Contents of the file:");
+        while ((line = fileReader.readLine()) != null) {
+            System.out.println(line);
+        }
+        fileReader.close();

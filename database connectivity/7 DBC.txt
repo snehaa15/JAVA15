@@ -1,0 +1,20 @@
+  // 7. Scrollable ResultSet - Display Specific Row
+    private static void displayRowByNumber(Connection connection) throws SQLException {
+        String sql = "SELECT * FROM users";
+        try (Statement stmt = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
+             ResultSet rs = stmt.executeQuery(sql)) {
+
+            Scanner scanner = new Scanner(System.in);
+            System.out.print("Enter row number to display: ");
+            int rowNumber = scanner.nextInt();
+
+            if (rs.absolute(rowNumber)) {
+                int id = rs.getInt("id");
+                String name = rs.getString("name");
+                int age = rs.getInt("age");
+                System.out.printf("Row %d: ID: %d, Name: %s, Age: %d%n", rowNumber, id, name, age);
+            } else {
+                System.out.println("Row not found.");
+            }
+        }
+    }

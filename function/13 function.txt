@@ -1,0 +1,7 @@
+public static boolean allVowels(String str) {
+    return str.toLowerCase().matches("[aeiou]+");
+}
+
+// Example usage:
+System.out.println(allVowels("aeiou")); // Output: true
+System.out.println(allVowels("hello")); // Output: false

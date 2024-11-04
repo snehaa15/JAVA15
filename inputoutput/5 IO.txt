@@ -1,0 +1,4 @@
+ // 5. Enter the double from user using Scanner class
+        System.out.print("Enter a double: ");
+        double doubleNumber = scanner.nextDouble();
+        System.out.println("You entered: " + doubleNumber);

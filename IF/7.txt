@@ -1,0 +1,52 @@
+// Define the Playable interface
+interface Playable {
+    // Method to play the sport
+    void play();
+}
+
+// Define the Football class that implements Playable
+class Football implements Playable {
+    @Override
+    public void play() {
+        System.out.println("Playing Football.");
+    }
+}
+
+// Define the Volleyball class that implements Playable
+class Volleyball implements Playable {
+    @Override
+    public void play() {
+        System.out.println("Playing Volleyball.");
+    }
+}
+
+// Define the Basketball class that implements Playable
+class Basketball implements Playable {
+    @Override
+    public void play() {
+        System.out.println("Playing Basketball.");
+    }
+}
+
+// Main class to test the implementation
+class Main {
+    public static void main(String[] args) {
+        // Create instances of Football, Volleyball, and Basketball
+        Playable football = new Football();
+        Playable volleyball = new Volleyball();
+        Playable basketball = new Basketball();
+
+        // Call the play method for each instance
+        football.play();
+        volleyball.play();
+        basketball.play();
+    }
+}
+
+
+OUTPUT
+
+
+Playing Football.
+Playing Volleyball.
+Playing Basketball.

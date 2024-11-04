@@ -1,0 +1,12 @@
+import java.util.Date;
+class CurrentDate {
+    public static void main(String[] args) {
+        Date currentDate = new Date();
+        System.out.println("Current Date: " + currentDate);
+    }
+}
+
+OUTPUT
+
+
+Current Date: Sun Sep 08 20:11:16 IST 2024

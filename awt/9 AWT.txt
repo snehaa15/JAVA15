@@ -1,0 +1,17 @@
+import java.awt.*;
+
+public class LabelCustomLayoutExample extends Frame {
+    public LabelCustomLayoutExample() {
+        setLayout(null);
+        Label label = new Label("Welcome to AWT!");
+        label.setBounds(100, 100, 120, 30);
+        add(label);
+        
+        setSize(300, 200);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new LabelCustomLayoutExample();
+    }
+}

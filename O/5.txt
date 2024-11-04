@@ -1,0 +1,69 @@
+class Employee {
+    private String name;
+    private String jobTitle;
+    private double salary;
+
+    // Constructor
+    public Employee(String name, String jobTitle, double salary) {
+        this.name = name;
+        this.jobTitle = jobTitle;
+        this.salary = salary;
+    }
+
+    // Getters
+    public String getName() {
+        return name;
+    }
+
+    public String getJobTitle() {
+        return jobTitle;
+    }
+
+    public double getSalary() {
+        return salary;
+    }
+
+    // Method to calculate annual salary
+    public double calculateAnnualSalary() {
+        return salary * 12;
+    }
+
+    // Method to update salary
+    public void updateSalary(double newSalary) {
+        this.salary = newSalary;
+    }
+
+    // Method to print employee details
+    public void printEmployeeDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Job Title: " + jobTitle);
+        System.out.println("Salary: $" + salary);
+        System.out.println("Annual Salary: $" + calculateAnnualSalary());
+    }
+
+    // Main method to test the Employee class
+    public static void main(String[] args) {
+  Employee employee = new Employee("John Doe", "Software Engineer",50000);
+
+        // Print employee details
+        employee.printEmployeeDetails();
+
+        // Update salary
+        employee.updateSalary(60000);
+
+        // Print updated employee details
+        employee.printEmployeeDetails();
+    }
+}
+
+OUTPUT
+
+
+Name: John Doe
+Job Title: Software Engineer
+Salary: $50000.0
+Annual Salary: $600000.0
+Name: John Doe
+Job Title: Software Engineer
+Salary: $60000.0
+Annual Salary: $720000.0

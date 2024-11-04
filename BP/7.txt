@@ -1,0 +1,20 @@
+class BPr7 {
+  public static void main(String[] args) {
+    int decimal = 12;
+    String binary = "";
+    System.out.println("Decimal: " + decimal);
+    while (decimal > 0) {
+      int remainder = decimal % 2;
+      binary = remainder + binary;
+      decimal = decimal / 2;
+    }
+
+    System.out.println("Binary: " + binary);
+  }
+}
+
+OUTPUT
+
+
+Decimal: 12
+Binary: 1100

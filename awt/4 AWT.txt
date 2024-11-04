@@ -1,0 +1,16 @@
+import java.awt.*;
+
+public class TextFieldFlowLayoutExample extends Frame {
+    public TextFieldFlowLayoutExample() {
+        setLayout(new FlowLayout());
+        TextField textField = new TextField("Type here", 20);
+        add(textField);
+        
+        setSize(300, 200);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new TextFieldFlowLayoutExample();
+    }
+}

@@ -1,0 +1,17 @@
+import java.awt.*;
+
+public class TextFieldCustomLayoutExample extends Frame {
+    public TextFieldCustomLayoutExample() {
+        setLayout(null);
+        TextField textField = new TextField("Type here");
+        textField.setBounds(100, 100, 100, 30);
+        add(textField);
+        
+        setSize(300, 200);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new TextFieldCustomLayoutExample();
+    }
+}

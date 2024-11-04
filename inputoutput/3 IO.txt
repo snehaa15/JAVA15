@@ -1,0 +1,5 @@
+  // 3. Enter the integer from user using Scanner class
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter an integer: ");
+        int integer = scanner.nextInt();
+        System.out.println("You entered: " + integer)

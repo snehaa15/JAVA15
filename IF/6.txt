@@ -1,0 +1,55 @@
+// Define the Drawable interface
+interface Drawable {
+    // Method to draw the shape
+    void draw();
+}
+
+// Define the Circle class that implements Drawable
+class Circle implements Drawable {
+    // Implement the draw method for Circle
+    @Override
+    public void draw() {
+        System.out.println("Drawing a Circle.");
+    }
+}
+
+// Define the Rectangle class that implements Drawable
+class Rectangle implements Drawable {
+    // Implement the draw method for Rectangle
+    @Override
+    public void draw() {
+        System.out.println("Drawing a Rectangle.");
+    }
+}
+
+// Define the Triangle class that implements Drawable
+class Triangle implements Drawable {
+    // Implement the draw method for Triangle
+    @Override
+    public void draw() {
+        System.out.println("Drawing a Triangle.");
+    }
+}
+
+// Main class to test the implementation
+class Main {
+    public static void main(String[] args) {
+        // Create instances of Circle, Rectangle, and Triangle
+        Drawable circle = new Circle();
+        Drawable rectangle = new Rectangle();
+        Drawable triangle = new Triangle();
+
+        // Call the draw method for each instance
+        circle.draw();
+        rectangle.draw();
+        triangle.draw();
+    }
+}
+
+
+OUTPUT
+
+
+Drawing a Circle.
+Drawing a Rectangle.
+Drawing a Triangle.

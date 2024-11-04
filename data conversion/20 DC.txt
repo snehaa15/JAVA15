@@ -1,0 +1,6 @@
+ // 20. Convert int to char
+        int intToChar = 65;
+        char charFromInt = (char) intToChar; // ASCII/Unicode conversion
+        System.out.println("Int to char: " + charFromInt);
+    }
+}

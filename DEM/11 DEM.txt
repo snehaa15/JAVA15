@@ -1,0 +1,16 @@
+import javax.swing.*;
+
+public class ListBoxMultiSelect {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("List Box Selection");
+        String[] items = {"Item 1", "Item 2", "Item 3", "Item 4"};
+        JList<String> list = new JList<>(items);
+        list.setSelectionMode(ListSelectionModel.MULTIPLE_INTERVAL_SELECTION);
+        
+        frame.add(new JScrollPane(list));
+        
+        frame.setSize(300, 200);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}

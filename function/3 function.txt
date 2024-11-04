@@ -1,0 +1,13 @@
+public static String middleCharacter(String str) {
+    int length = str.length();
+    int middle = length / 2;
+    if (length % 2 == 0) {
+        return str.substring(middle - 1, middle + 1);
+    } else {
+        return Character.toString(str.charAt(middle));
+    }
+}
+
+// Example usage:
+System.out.println(middleCharacter("hello")); // Output: l
+System.out.println(middleCharacter("java"));  // Output: av

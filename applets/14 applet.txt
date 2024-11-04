@@ -1,0 +1,36 @@
+import java.applet.Applet;
+import java.awt.*;
+import java.util.*;
+
+public class DigitalClockApplet extends Applet implements Runnable {
+    private Thread clockThread;
+
+    public void init() {
+        setBackground(Color.BLACK);
+        setForeground(Color.WHITE);
+        clockThread = new Thread(this);
+        clockThread.start();
+    }
+
+    public void run() {
+        while (true) {
+            repaint();
+            try {
+                Thread.sleep(1000); // Update every second
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public void paint(Graphics g) {
+        Calendar cal = Calendar.getInstance();
+        String time = String.format("%02d:%02d:%02d", 
+            cal.get(Calendar.HOUR_OF_DAY), 
+            cal.get(Calendar.MINUTE), 
+            cal.get(Calendar.SECOND));
+        
+        g.setFont(new Font("Arial", Font.BOLD, 30));
+        g.drawString(time, 50, 50);
+    }
+}

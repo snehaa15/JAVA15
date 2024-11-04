@@ -1,0 +1,20 @@
+import java.awt.*;
+
+public class ChoiceCustomLayoutExample extends Frame {
+    public ChoiceCustomLayoutExample() {
+        setLayout(null);
+        Choice choice = new Choice();
+        choice.add("Option 1");
+        choice.add("Option 2");
+        choice.add("Option 3");
+        choice.setBounds(100, 100, 100, 30);
+        add(choice);
+        
+        setSize(300, 200);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new ChoiceCustomLayoutExample();
+    }
+}

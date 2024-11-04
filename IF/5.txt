@@ -1,0 +1,66 @@
+// Define the Resizable interface
+interface Resizable {
+    // Method to resize width
+    void resizeWidth(int width);
+
+    // Method to resize height
+    void resizeHeight(int height);
+}
+
+// Define the Rectangle class that implements Resizable
+class Rectangle implements Resizable {
+    private int width;
+    private int height;
+
+    // Constructor to initialize width and height
+    public Rectangle(int width, int height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    // Implement resizeWidth method
+    @Override
+    public void resizeWidth(int width) {
+        this.width = width;
+    }
+
+    // Implement resizeHeight method
+    @Override
+    public void resizeHeight(int height) {
+        this.height = height;
+    }
+
+    // Method to display the dimensions of the rectangle
+    public void displayDimensions() {
+        System.out.println("Rectangle width: " + width + ", height: " + height);
+    }
+}
+
+// Main class to test the implementation
+class Main {
+    public static void main(String[] args) {
+        // Create a Rectangle object
+        Rectangle rectangle = new Rectangle(10, 20);
+
+        // Display initial dimensions
+        System.out.println("Initial dimensions:");
+        rectangle.displayDimensions();
+
+        // Resize the rectangle
+        rectangle.resizeWidth(15);
+        rectangle.resizeHeight(25);
+
+        // Display resized dimensions
+        System.out.println("Resized dimensions:");
+        rectangle.displayDimensions();
+    }
+}
+
+
+OUTPUT
+
+
+Initial dimensions:
+Rectangle width: 10, height: 20
+Resized dimensions:
+Rectangle width: 15, height: 25

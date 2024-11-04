@@ -1,0 +1,103 @@
+// Define the Shape interface with the getArea method
+interface Shape {
+    // Method to calculate the area of the shape
+    double getArea();
+}
+
+// Define the Rectangle class that implements Shape
+class Rectangle implements Shape {
+    private double width;
+    private double height;
+
+    // Constructor to initialize width and height
+    public Rectangle(double width, double height) {
+        this.width = width;
+        this.height = height;
+    }
+
+    // Implement the getArea method for Rectangle
+    @Override
+    public double getArea() {
+        return width * height;
+    }
+
+    // Getters for width and height
+    public double getWidth() {
+        return width;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+}
+
+// Define the Circle class that implements Shape
+class Circle implements Shape {
+    private double radius;
+
+    // Constructor to initialize radius
+    public Circle(double radius) {
+        this.radius = radius;
+    }
+
+    // Implement the getArea method for Circle
+    @Override
+    public double getArea() {
+        return Math.PI * Math.pow(radius, 2);
+    }
+
+    // Getter for radius
+    public double getRadius() {
+        return radius;
+    }
+}
+
+// Define the Triangle class that implements Shape
+class Triangle implements Shape {
+    private double base;
+    private double height;
+
+    // Constructor to initialize base and height
+    public Triangle(double base, double height) {
+        this.base = base;
+        this.height = height;
+    }
+
+    // Implement the getArea method for Triangle
+    @Override
+    public double getArea() {
+        return 0.5 * base * height;
+    }
+
+    // Getters for base and height
+    public double getBase() {
+        return base;
+    }
+
+    public double getHeight() {
+        return height;
+    }
+}
+
+// Main class to test the implementation
+class Main {
+    public static void main(String[] args) {
+        // Create instances of Rectangle, Circle, and Triangle
+        Shape rectangle = new Rectangle(5, 10);
+        Shape circle = new Circle(7);
+        Shape triangle = new Triangle(6, 8);
+
+        // Display the area of each shape
+        System.out.println("Rectangle Area: " + rectangle.getArea());
+        System.out.println("Circle Area: " + circle.getArea());
+        System.out.println("Triangle Area: " + triangle.getArea());
+    }
+}
+
+
+OUTPUT
+
+
+Rectangle Area: 50.0
+Circle Area: 153.93804002589985
+Triangle Area: 24.0

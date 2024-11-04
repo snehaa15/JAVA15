@@ -1,0 +1,19 @@
+abstract class Vehicle {
+    protected String make, model, fuelType;
+    protected int year;
+
+    public abstract double calculateFuelEfficiency();
+    public abstract double getMaxSpeed();
+}
+
+class Car extends Vehicle {
+    @Override
+    public double calculateFuelEfficiency() {
+        return 25; // example mpg
+    }
+
+    @Override
+    public double getMaxSpeed() {
+        return 120;
+    }
+}

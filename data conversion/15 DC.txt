@@ -1,0 +1,5 @@
+
+        // 15. Convert int to long
+        int intToLong = 100;
+        long longFromInt = intToLong; // implicit conversion
+        System.out.println("Int to long: " + longFromInt);

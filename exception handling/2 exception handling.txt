@@ -1,0 +1,17 @@
+public class OddNumberExceptionExample {
+    public static void checkEven(int num) throws Exception {
+        if (num % 2 != 0) {
+            throw new Exception("The number is odd");
+        } else {
+            System.out.println("The number is even");
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            checkEven(3);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}

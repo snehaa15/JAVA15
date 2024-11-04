@@ -1,0 +1,8 @@
+import java.applet.Applet;
+import java.awt.Graphics;
+
+public class DrawLineApplet extends Applet {
+    public void paint(Graphics g) {
+        g.drawLine(20, 30, 200, 30); // start x1,y1 and end x2,y2
+    }
+}

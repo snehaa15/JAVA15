@@ -1,0 +1,17 @@
+public class VowelCheckExceptionExample {
+    public static void checkVowels(String str) throws Exception {
+        if (!str.matches(".*[AEIOUaeiou].*")) {
+            throw new Exception("String does not contain any vowels");
+        } else {
+            System.out.println("String contains vowels");
+        }
+    }
+
+    public static void main(String[] args) {
+        try {
+            checkVowels("xyz");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+    }
+}

@@ -1,0 +1,4 @@
+       // 12. Convert char to String
+        char charToStr = 'A';
+        String charToString = Character.toString(charToStr);
+        System.out.println("Char to String: " + charToString);

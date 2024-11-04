@@ -1,0 +1,11 @@
+import java.applet.Applet;
+import java.awt.Font;
+import java.awt.Graphics;
+
+public class SetFontApplet extends Applet {
+    public void paint(Graphics g) {
+        Font font = new Font("Arial", Font.BOLD | Font.ITALIC, 20);
+        g.setFont(font);
+        g.drawString("Hello World", 20, 20);
+    }
+}

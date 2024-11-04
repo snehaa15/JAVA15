@@ -1,0 +1,7 @@
+public static int wordCount(String str) {
+    String[] words = str.trim().split("\\s+");
+    return words.length;
+}
+
+// Example usage:
+System.out.println(wordCount("This is a test string.")); // Output: 5

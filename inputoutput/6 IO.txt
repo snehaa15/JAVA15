@@ -1,0 +1,5 @@
+
+        // 6. Enter the boolean from user using Scanner class
+        System.out.print("Enter a boolean (true/false): ");
+        boolean boolValue = scanner.nextBoolean();
+        System.out.println("You entered: " + boolValue);

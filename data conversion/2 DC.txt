@@ -1,0 +1,4 @@
+ // 2. Convert int to String
+        int intToStr = 456;
+        String intToString = Integer.toString(intToStr);
+        System.out.println("Int to String: " + intToString);

@@ -1,0 +1,4 @@
+     // 5. Convert String to float
+        String strToFloat = "12.34";
+        float floatValue = Float.parseFloat(strToFloat);
+        System.out.println("String to float: " + floatValue);

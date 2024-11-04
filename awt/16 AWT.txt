@@ -1,0 +1,16 @@
+import java.awt.*;
+
+public class TextAreaFlowLayoutExample extends Frame {
+    public TextAreaFlowLayoutExample() {
+        setLayout(new FlowLayout());
+        TextArea textArea = new TextArea("Enter text here", 5, 20);
+        add(textArea);
+        
+        setSize(300, 200);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new TextAreaFlowLayoutExample();
+    }
+}

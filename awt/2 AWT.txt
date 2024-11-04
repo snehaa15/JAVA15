@@ -1,0 +1,17 @@
+import java.awt.*;
+
+public class ButtonCustomLayoutExample extends Frame {
+    public ButtonCustomLayoutExample() {
+        setLayout(null);
+        Button button = new Button("Click Me");
+        button.setBounds(100, 100, 80, 30);
+        add(button);
+        
+        setSize(300, 200);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new ButtonCustomLayoutExample();
+    }
+}

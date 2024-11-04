@@ -1,0 +1,25 @@
+class Arr3{
+public static void main(String[] args){
+int arr[]={10,20,30,30,50};
+boolean[] visited=new boolean[arr.length];
+System.out.println("Element Frequency in Array : ");
+for(int i = 0 ; i < arr.length ; i++){
+if(visited[i]==true){
+continue;
+}
+int count=1;
+for(int j = i+1 ; j < arr.length ; j++){
+if(arr[i] == arr[j]){
+visited[j] = true;
+count++;
+}}
+System.out.println("Element "+arr[i]+" : "+count+" time");
+}}}
+
+OUTPUT
+
+
+Original Elements are :
+10 12 15 17 20
+Array after Left Rotation :
+12 15 17 20 10

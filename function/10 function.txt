@@ -1,0 +1,11 @@
+public static int countDigitTwo(int num) {
+    int count = 0;
+    while (num > 0) {
+        if (num % 10 == 2) count++;
+        num /= 10;
+    }
+    return count;
+}
+
+// Example usage:
+System.out.println(countDigitTwo(2022)); // Output: 2

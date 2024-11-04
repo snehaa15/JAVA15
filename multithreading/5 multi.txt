@@ -1,0 +1,54 @@
+import java.util.ArrayList;
+import java.util.List;
+
+public class PrimeSum {
+    private static int limit = 100;
+    private static int primeSum = 0;
+
+    public static void main(String[] args) throws InterruptedException {
+        List<Thread> threads = new ArrayList<>();
+        int range = limit / 4;
+
+        for (int i = 1; i <= limit; i += range) {
+            Thread thread = new Thread(new PrimeTask(i, Math.min(i + range - 1, limit)));
+            thread.start();
+            threads.add(thread);
+        }
+
+        for (Thread thread : threads) {
+            thread.join();
+        }
+
+        System.out.println("Sum of primes up to " + limit + ": " + primeSum);
+    }
+
+    private static synchronized void addToSum(int value) {
+        primeSum += value;
+    }
+
+    static class PrimeTask implements Runnable {
+        int start, end;
+
+        PrimeTask(int start, int end) {
+            this.start = start;
+            this.end = end;
+        }
+
+        @Override
+        public void run() {
+            for (int i = start; i <= end; i++) {
+                if (isPrime(i)) {
+                    addToSum(i);
+                }
+            }
+        }
+
+        private boolean isPrime(int n) {
+            if (n <= 1) return false;
+            for (int i = 2; i * i <= n; i++) {
+                if (n % i == 0) return false;
+            }
+            return true;
+        }
+    }
+}

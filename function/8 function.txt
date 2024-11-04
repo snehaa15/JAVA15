@@ -1,0 +1,11 @@
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public static void displayCurrentDateTime() {
+    LocalDateTime now = LocalDateTime.now();
+    DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+    System.out.println(now.format(formatter));
+}
+
+// Example usage:
+displayCurrentDateTime(); // Output: Current date and time

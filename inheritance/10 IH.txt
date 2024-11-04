@@ -1,0 +1,13 @@
+abstract class Employee {
+    protected String name, address, jobTitle;
+    protected double salary;
+
+    public abstract double calculateBonus();
+}
+
+class Manager extends Employee {
+    @Override
+    public double calculateBonus() {
+        return salary * 0.1;
+    }
+}

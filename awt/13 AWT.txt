@@ -1,0 +1,21 @@
+import java.awt.*;
+
+public class CheckboxGroupCustomLayoutExample extends Frame {
+    public CheckboxGroupCustomLayoutExample() {
+        setLayout(null);
+        CheckboxGroup group = new CheckboxGroup();
+        Checkbox option1 = new Checkbox("Option 1", group, false);
+        option1.setBounds(100, 100, 100, 30);
+        Checkbox option2 = new Checkbox("Option 2", group, false);
+        option2.setBounds(100, 150, 100, 30);
+        add(option1);
+        add(option2);
+        
+        setSize(300, 300);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new CheckboxGroupCustomLayoutExample();
+    }
+}

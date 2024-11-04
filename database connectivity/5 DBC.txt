@@ -1,0 +1,10 @@
+
+    // 5. Delete Row
+    private static void deleteRow(Connection connection, int id) throws SQLException {
+        String sql = "DELETE FROM users WHERE id = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
+            pstmt.setInt(1, id);
+            pstmt.executeUpdate();
+            System.out.println("Row deleted.");
+        }
+    }

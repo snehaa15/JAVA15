@@ -1,0 +1,5 @@
+
+        // 4. Enter the float from user using Scanner class
+        System.out.print("Enter a float: ");
+        float floatNumber = scanner.nextFloat();
+        System.out.println("You entered: " + floatNumber);

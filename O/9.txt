@@ -1,0 +1,99 @@
+class Student {
+    private String name;
+    private int grade;
+    private String[] courses;
+
+    // Constructor
+    public Student(String name, int grade) {
+        this.name = name;
+        this.grade = grade;
+        this.courses = new String[0];
+    }
+
+    // Getters
+    public String getName() {
+        return name;
+    }
+
+    public int getGrade() {
+        return grade;
+    }
+
+    public String[] getCourses() {
+        return courses;
+    }
+
+    // Method to add a course
+    public void addCourse(String course) {
+        String[] newCourses = new String[courses.length + 1];
+        for (int i = 0; i < courses.length; i++) {
+            newCourses[i] = courses[i];
+        }
+        newCourses[courses.length] = course;
+        courses = newCourses;
+    }
+
+    // Method to remove a course
+    public void removeCourse(String course) {
+        int index = -1;
+        for (int i = 0; i < courses.length; i++) {
+            if (courses[i].equals(course)) {
+                index = i;
+                break;
+            }
+        }
+        if (index != -1) {
+            String[] newCourses = new String[courses.length - 1];
+            for (int i = 0; i < index; i++) {
+                newCourses[i] = courses[i];
+            }
+            for (int i = index; i < courses.length - 1; i++) {
+                newCourses[i] = courses[i + 1];
+            }
+            courses = newCourses;
+        } else {
+            System.out.println("Course not found.");
+        }
+    }
+
+    // Method to print student details
+    public void printStudentDetails() {
+        System.out.println("Name: " + name);
+        System.out.println("Grade: " + grade);
+        System.out.print("Courses: ");
+        for (String course : courses) {
+            System.out.print(course + " ");
+        }
+        System.out.println();
+    }
+}
+
+class G {
+    public static void main(String[] args) {
+        Student student = new Student("John Doe", 10);
+
+        // Add some courses
+        student.addCourse("Math");
+        student.addCourse("Science");
+        student.addCourse("English");
+
+        // Print student details
+        student.printStudentDetails();
+
+        // Remove a course
+        student.removeCourse("Science");
+
+        // Print student details again
+        student.printStudentDetails();
+    }
+}
+
+OUTPUT
+
+
+Name: John Doe
+Grade: 10
+Courses: Math Science English
+Name: John Doe
+Grade: 10
+Courses: Math English

@@ -1,0 +1,53 @@
+package p2;
+public class A{
+public void display1(){
+System.out.println("Public Class A");
+}
+}
+--------------------------------------------
+package p2;
+
+public class B{
+public void display2(){
+System.out.println("Public Class B");
+}
+}
+--------------------------------------------
+package p2;
+public class C{
+public void display3(){
+System.out.println("Public Class C");
+}
+}
+--------------------------------------------
+package p2;
+public class D{
+public void display4(){
+System.out.println("Public Class D");
+}
+}
+--------------------------------------------
+package p2;
+
+class E
+{
+public static void main(String[] args){
+p2.A obj1=new p2.A();
+obj1.display1();
+p2.B obj2=new p2.B();
+obj2.display2();
+p2.C obj3=new p2.C();
+obj3.display3();
+p2.D obj4=new p2.D();
+obj4.display4();
+}
+}
+
+OUTPUT
+
+
+G:\Packages>java p2.E
+Public Class A
+Public Class B
+Public Class C
+Public Class D

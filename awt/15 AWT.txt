@@ -1,0 +1,20 @@
+import java.awt.*;
+
+public class ListCustomLayoutExample extends Frame {
+    public ListCustomLayoutExample() {
+        setLayout(null);
+        List list = new List(3);
+        list.add("Item 1");
+        list.add("Item 2");
+        list.add("Item 3");
+        list.setBounds(100, 100, 100, 60);
+        add(list);
+        
+        setSize(300, 300);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new ListCustomLayoutExample();
+    }
+}

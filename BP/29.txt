@@ -1,0 +1,20 @@
+class BPr29{
+    public static void main(String[] args) {
+        double base = 5.0; // example input
+        double height = 6.0; // example input
+
+        double area = calculateTriangleArea(base, height);
+
+        System.out.println("Area of triangle with base " + base + " and height " + height + ": " + area);
+    }
+
+    public static double calculateTriangleArea(double base, double height) {
+        double area = 0.5 * base * height;
+        return area;
+    }
+}
+
+OUTPUT
+
+
+Area of triangle with base 5.0 and height 6.0: 15.0

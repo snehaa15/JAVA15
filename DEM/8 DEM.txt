@@ -1,0 +1,27 @@
+import javax.swing.*;
+
+public class CheckBoxRadioButtons {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("CheckBoxes and RadioButtons");
+        
+        JCheckBox cb1 = new JCheckBox("CheckBox 1");
+        JCheckBox cb2 = new JCheckBox("CheckBox 2");
+        
+        JRadioButton rb1 = new JRadioButton("RadioButton 1");
+        JRadioButton rb2 = new JRadioButton("RadioButton 2");
+        
+        ButtonGroup group = new ButtonGroup();
+        group.add(rb1);
+        group.add(rb2);
+        
+        frame.setLayout(new java.awt.FlowLayout());
+        frame.add(cb1);
+        frame.add(cb2);
+        frame.add(rb1);
+        frame.add(rb2);
+        
+        frame.setSize(300, 200);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}

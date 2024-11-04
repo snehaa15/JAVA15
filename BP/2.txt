@@ -1,0 +1,13 @@
+class BPr2{
+public static void main(String[] args){
+int a=20;
+int b=20;
+int sum=a+b;
+System.out.println("Sum Of Two Numbers is : "+sum);
+}
+}
+
+OUTPUT
+
+
+Sum Of Two Numbers is : 40

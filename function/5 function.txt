@@ -1,0 +1,6 @@
+public static double futureInvestmentValue(double principal, double rate, int years) {
+    return principal * Math.pow((1 + rate / 100), years);
+}
+
+// Example usage:
+System.out.println(futureInvestmentValue(1000, 5, 10)); // Output: 1628.89

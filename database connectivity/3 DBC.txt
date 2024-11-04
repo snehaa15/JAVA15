@@ -1,0 +1,11 @@
+  // 3. Insert Row
+    private static void insertRow(Connection connection, int id, String name, int age) throws SQLException {
+        String sql = "INSERT INTO users (id, name, age) VALUES (?, ?, ?)";
+        try (PreparedStatement pstmt = connection.prepareStatement(sql)) {
+            pstmt.setInt(1, id);
+            pstmt.setString(2, name);
+            pstmt.setInt(3, age);
+            pstmt.executeUpdate();
+            System.out.println("Row inserted.");
+        }
+    }

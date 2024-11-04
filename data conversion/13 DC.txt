@@ -1,0 +1,5 @@
+
+        // 13. Convert String to Object
+        String strToObject = "example";
+        Object objectValue = strToObject;
+        System.out.println("String to Object: " + objectValue);

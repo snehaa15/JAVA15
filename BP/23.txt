@@ -1,0 +1,22 @@
+class BPr23 {
+    public static void main(String[] args) {
+        int number = 25; 
+
+        double squareRoot = computeSquareRoot(number);
+
+        System.out.println("Square root of " + number + ": " + squareRoot);
+    }
+
+    public static double computeSquareRoot(int number) {
+        if (number < 0) {
+            throw new ArithmeticException("Cannot compute square root of a negative number");
+        }
+
+        return Math.sqrt(number);
+    }
+}
+
+OUTPUT
+
+
+Square root of 25: 5.0

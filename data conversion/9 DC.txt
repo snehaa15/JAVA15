@@ -1,0 +1,5 @@
+  // 9. Convert String to Date
+        String strToDate = "2024-11-03";
+        SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = dateFormat.parse(strToDate);
+        System.out.println("String to Date: " + date);

@@ -1,0 +1,44 @@
+ // 9. PreparedStatement - Insert, Update, Delete
+    private static void preparedStatementOperations(Connection connection) throws SQLException {
+        Scanner scanner = new Scanner(System.in);
+
+        // Insert row
+        System.out.print("Enter ID to insert: ");
+        int id = scanner.nextInt();
+        System.out.print("Enter Name: ");
+        String name = scanner.next();
+        System.out.print("Enter Age: ");
+        int age = scanner.nextInt();
+        String insertSql = "INSERT INTO users (id, name, age) VALUES (?, ?, ?)";
+        try (PreparedStatement pstmt = connection.prepareStatement(insertSql)) {
+            pstmt.setInt(1, id);
+            pstmt.setString(2, name);
+            pstmt.setInt(3, age);
+            pstmt.executeUpdate();
+            System.out.println("Inserted new row.");
+        }
+
+        // Update row
+        System.out.print("Enter ID to update: ");
+        int updateId = scanner.nextInt();
+        System.out.print("Enter new Name: ");
+        String newName = scanner.next();
+        String updateSql = "UPDATE users SET name = ? WHERE id = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(updateSql)) {
+            pstmt.setString(1, newName);
+            pstmt.setInt(2, updateId);
+            pstmt.executeUpdate();
+            System.out.println("Row updated.");
+        }
+
+        // Delete row
+        System.out.print("Enter ID to delete: ");
+        int deleteId = scanner.nextInt();
+        String deleteSql = "DELETE FROM users WHERE id = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(deleteSql)) {
+            pstmt.setInt(1, deleteId);
+            pstmt.executeUpdate();
+            System.out.println("Row deleted.");
+        }
+    }
+}

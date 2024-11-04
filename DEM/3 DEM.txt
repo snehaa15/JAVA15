@@ -1,0 +1,26 @@
+import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+public class ButtonImageDisplay {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Button and Image Display");
+        JButton button = new JButton("Click to Display Image");
+        JLabel label = new JLabel();
+
+        button.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent e) {
+                ImageIcon icon = new ImageIcon("path_to_image.jpg");
+                label.setIcon(icon);
+            }
+        });
+
+        frame.setLayout(new java.awt.FlowLayout());
+        frame.add(button);
+        frame.add(label);
+        
+        frame.setSize(400, 300);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.setVisible(true);
+    }
+}

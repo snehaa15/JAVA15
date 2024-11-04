@@ -1,0 +1,9 @@
+public static void printChars(char start, char end) {
+    for (char ch = start; ch <= end; ch++) {
+        System.out.print(ch + " ");
+    }
+    System.out.println();
+}
+
+// Example usage:
+printChars('A', 'P'); // Output: A B C D E F G H I J K L M N O P

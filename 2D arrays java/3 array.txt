@@ -1,0 +1,68 @@
+import java.util.Scanner;
+
+public class MatrixMultiplication {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        System.out.print("Enter number of rows for first matrix: ");
+        int rows1 = scanner.nextInt();
+        System.out.print("Enter number of columns for first matrix: ");
+        int cols1 = scanner.nextInt();
+        System.out.print("Enter number of columns for second matrix: ");
+        int cols2 = scanner.nextInt();
+        
+        int[][] matrix1 = new int[rows1][cols1];
+        int[][] matrix2 = new int[cols1][cols2];
+        int[][] productMatrix = new int[rows1][cols2];
+        
+        System.out.println("Enter elements of first matrix:");
+        for (int i = 0; i < rows1; i++) {
+            for (int j = 0; j < cols1; j++) {
+                matrix1[i][j] = scanner.nextInt();
+            }
+        }
+        
+        System.out.println("Enter elements of second matrix:");
+        for (int i = 0; i < cols1; i++) {
+            for (int j = 0; j < cols2; j++) {
+                matrix2[i][j] = scanner.nextInt();
+            }
+        }
+        
+        // Multiply matrices
+        for (int i = 0; i < rows1; i++) {
+            for (int j = 0; j < cols2; j++) {
+                for (int k = 0; k < cols1; k++) {
+                    productMatrix[i][j] += matrix1[i][k] * matrix2[k][j];
+                }
+            }
+        }
+        
+        System.out.println("Product of matrices:");
+        for (int i = 0; i < rows1; i++) {
+            for (int j = 0; j < cols2; j++) {
+                System.out.print(productMatrix[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+
+OUTPUT
+
+
+Enter number of rows for first matrix: 2
+Enter number of columns for first matrix: 2
+Enter number of columns for second matrix: 2
+Enter elements of first matrix:
+1 2
+3 4
+Enter elements of second matrix:
+2 0
+1 2
+Product of matrices:
+4 4
+10 8

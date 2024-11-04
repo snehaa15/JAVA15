@@ -1,0 +1,7 @@
+public static boolean isMiddlePoint(int a, int b, int c) {
+    return (a < b && b < c) || (c < b && b < a);
+}
+
+// Example usage:
+System.out.println(isMiddlePoint(3, 5, 7)); // Output: true
+System.out.println(isMiddlePoint(10, 5, 7)); // Output: false

@@ -1,0 +1,26 @@
+public class JoinYieldExample extends Thread {
+    public JoinYieldExample(String name) {
+        super(name);
+    }
+
+    @Override
+    public void run() {
+        for (int i = 1; i <= 5; i++) {
+            System.out.println(getName() + " - Count: " + i);
+            Thread.yield();  // Yield control to other threads
+        }
+    }
+
+    public static void main(String[] args) throws InterruptedException {
+        JoinYieldExample thread1 = new JoinYieldExample("Thread 1");
+        JoinYieldExample thread2 = new JoinYieldExample("Thread 2");
+
+        thread1.start();
+        thread1.join();  // Main thread waits for thread1 to complete
+
+        thread2.start();
+        thread2.join();  // Main thread waits for thread2 to complete
+
+        System.out.println("Both threads have finished execution.");
+    }
+}

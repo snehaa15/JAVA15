@@ -1,0 +1,5 @@
+
+        // 11. Convert String to char
+        String strToChar = "hello";
+        char charValue = strToChar.charAt(0); // getting first character
+        System.out.println("String to char: " + charValue);

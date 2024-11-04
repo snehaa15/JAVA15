@@ -1,0 +1,16 @@
+import java.awt.*;
+
+public class LabelFlowLayoutExample extends Frame {
+    public LabelFlowLayoutExample() {
+        setLayout(new FlowLayout());
+        Label label = new Label("Welcome to AWT!");
+        add(label);
+        
+        setSize(300, 200);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new LabelFlowLayoutExample();
+    }
+}

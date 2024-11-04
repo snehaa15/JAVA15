@@ -1,0 +1,23 @@
+class Str3{
+    public static void main(String[] args) {
+        String original = "Hello";
+        String modified = original;
+
+        System.out.println("Original: " + original);
+        System.out.println("Modified: " + modified);
+
+        // Try to modify the original string
+        original += " World!";
+
+        System.out.println("Original after modification: " + original);
+        System.out.println("Modified after original modification: " + modified);
+    }
+}
+
+OUTPUT
+
+
+Original: Hello
+Modified: Hello
+Original after modification: Hello World!
+Modified after original modification: Hello

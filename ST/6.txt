@@ -1,0 +1,18 @@
+class Str6 {
+    public static void main(String[] args) {
+        StringBuffer sb = new StringBuffer("Hello World!");
+
+        System.out.println("Initial string: " + sb.toString());
+
+        // Insert a string at a specific position
+        sb.insert(6, "Beautiful ");
+
+        System.out.println("String after insert: " + sb.toString());
+    }
+}
+
+OUTPUT
+
+
+Initial string: Hello World!
+String after insert: Hello Beautiful World!

@@ -1,0 +1,16 @@
+class BPr18 {
+    public static void main(String[] args) {
+        String str = "123";
+        try {
+            int integer = Integer.parseInt(str);
+            System.out.println("The integer value is: " + integer);
+        } catch (NumberFormatException e) {
+            System.out.println("Error: Unable to convert string to integer.");
+        }
+    }
+}
+
+OUTPUT
+
+
+The integer value is: 123

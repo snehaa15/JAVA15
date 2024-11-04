@@ -1,0 +1,19 @@
+import java.awt.*;
+
+public class ListFlowLayoutExample extends Frame {
+    public ListFlowLayoutExample() {
+        setLayout(new FlowLayout());
+        List list = new List(3);
+        list.add("Item 1");
+        list.add("Item 2");
+        list.add("Item 3");
+        add(list);
+        
+        setSize(300, 200);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new ListFlowLayoutExample();
+    }
+}

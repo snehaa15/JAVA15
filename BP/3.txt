@@ -1,0 +1,15 @@
+class BPr3{
+public static void main(String[] args){
+int a=20;
+int b=20;
+int product=a*b;
+System.out.println("Number 1 is : "+a+"\t Number 2 is : "+b);
+System.out.println("Product Of Two Numbers is : "+product);
+}
+}
+
+OUTPUT
+
+
+Number 1 is : 20         Number 2 is : 20
+Product Of Two Numbers is : 400

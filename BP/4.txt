@@ -1,0 +1,27 @@
+class BPr4{
+public static void main(String[] args){
+int a=20;
+int b=20;
+int sum=a+b;
+int sub=b-a;
+int product=a*b;
+int div=a/b;
+int rem=a%b;
+System.out.println("Number 1 is :  "+a+"  Number 2 is : "+b);
+System.out.println("Product Of Two Numbers is : "+product);
+System.out.println("Sum of Two Numbers : "+sum);
+System.out.println("Subtraction of Two Numbers : "+sub);
+System.out.println("Division of 2 Numbers : "+div);
+System.out.println("Remainder after Division of 2 Numbers : "+rem);
+}
+}
+
+OUTPUT
+
+
+Number 1 is :  20  Number 2 is : 20
+Product Of Two Numbers is : 400
+Sum of Two Numbers : 40
+Subtraction of Two Numbers : 0
+Division of 2 Numbers : 1
+Remainder after Division of 2 Numbers : 0

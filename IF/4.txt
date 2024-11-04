@@ -1,0 +1,154 @@
+// Define the Account interface
+interface Account {
+    void deposit(double amount);
+    void withdraw(double amount);
+    double getBalance();
+    void calculateInterest();
+}
+
+// Define the Bank class that manages accounts
+class Bank {
+    private Account[] accounts;
+    private int accountCount;
+
+    // Constructor to initialize the array of accounts
+    public Bank(int capacity) {
+        accounts = new Account[capacity];
+        accountCount = 0;
+    }
+
+    // Method to add an account to the bank
+    public void addAccount(Account account) {
+        if (accountCount < accounts.length) {
+            accounts[accountCount++] = account;
+        } else {
+            System.out.println("Bank is at full capacity. Cannot add more accounts.");
+        }
+    }
+
+    // Method to display all account balances
+    public void displayAllBalances() {
+        for (int i = 0; i < accountCount; i++) {
+            System.out.println("Balance: $" + accounts[i].getBalance());
+        }
+    }
+}
+
+// Define the SavingsAccount class that implements Account
+class SavingsAccount implements Account {
+    private double balance;
+    private double interestRate;
+
+    // Constructor to initialize balance and interest rate
+    public SavingsAccount(double balance, double interestRate) {
+        this.balance = balance;
+        this.interestRate = interestRate;
+    }
+
+    @Override
+    public void deposit(double amount) {
+        balance += amount;
+    }
+
+    @Override
+    public void withdraw(double amount) {
+        if (amount <= balance) {
+            balance -= amount;
+        } else {
+            System.out.println("Insufficient funds for withdrawal.");
+        }
+    }
+
+    @Override
+    public double getBalance() {
+        return balance;
+    }
+
+    @Override
+    public void calculateInterest() {
+        balance += balance * (interestRate / 100);
+    }
+
+    // Getter for interest rate
+    public double getInterestRate() {
+        return interestRate;
+    }
+}
+
+// Define the CurrentAccount class that implements Account
+class CurrentAccount implements Account {
+    private double balance;
+    private double overdraftLimit;
+
+    // Constructor to initialize balance and overdraft limit
+    public CurrentAccount(double balance, double overdraftLimit) {
+        this.balance = balance;
+        this.overdraftLimit = overdraftLimit;
+    }
+
+    @Override
+    public void deposit(double amount) {
+        balance += amount;
+    }
+
+    @Override
+    public void withdraw(double amount) {
+        if (amount <= balance + overdraftLimit) {
+            balance -= amount;
+        } else {
+            System.out.println("Overdraft limit exceeded.");
+        }
+    }
+
+    @Override
+    public double getBalance() {
+        return balance;
+    }
+
+    @Override
+    public void calculateInterest() {
+        // Current accounts do not typically have interest
+        System.out.println("Current accounts do not have interest.");
+    }
+
+    // Getter for overdraft limit
+    public double getOverdraftLimit() {
+        return overdraftLimit;
+    }
+}
+
+// Main class to test the implementation
+class Main {
+    public static void main(String[] args) {
+        // Create bank instance with capacity for 3 accounts
+        Bank bank = new Bank(3);
+
+        // Create SavingsAccount and CurrentAccount objects
+        Account savingsAccount = new SavingsAccount(1000, 5); // 5% interest rate
+        Account currentAccount = new CurrentAccount(500, 200); // 200 units overdraft limit
+
+        // Add accounts to the bank
+        bank.addAccount(savingsAccount);
+        bank.addAccount(currentAccount);
+
+        // Perform some operations on the accounts
+        savingsAccount.deposit(200);
+        savingsAccount.withdraw(100);
+        ((SavingsAccount) savingsAccount).calculateInterest();
+
+        currentAccount.deposit(100);
+        currentAccount.withdraw(600);
+
+        // Display all balances
+        System.out.println("Account Balances:");
+        bank.displayAllBalances();
+    }
+}
+
+
+OUTPUT
+
+
+Account Balances:
+Balance: $1155.0
+Balance: $0.0

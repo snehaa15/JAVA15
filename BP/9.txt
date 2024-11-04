@@ -1,0 +1,19 @@
+class BPr9{
+  public static void main(String[] args) {
+    try {
+      // Try to create a Runtime object
+      Runtime runtime = Runtime.getRuntime();
+
+      // If we reach this point, Java is installed
+      System.out.println("Java is installed on your computer.");
+    } catch (Exception e) {
+      // If an exception occurs, Java is not installed
+      System.out.println("Java is not installed on your computer.");
+    }
+  }
+}
+
+OUTPUT
+
+
+Java is installed on your computer.

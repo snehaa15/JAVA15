@@ -1,0 +1,21 @@
+import java.applet.Applet;
+import java.awt.*;
+
+public class SmilingFaceApplet extends Applet {
+    public void paint(Graphics g) {
+        // Draw face
+        g.setColor(Color.YELLOW);
+        g.fillOval(50, 50, 200, 200); // Face
+
+        // Draw eyes
+        g.setColor(Color.BLACK);
+        g.fillOval(100, 100, 30, 30); // Left eye
+        g.fillOval(170, 100, 30, 30); // Right eye
+
+        // Draw mouth
+        g.drawArc(100, 130, 100, 80, 0, -180); // Mouth
+
+        // Draw smile
+        g.drawArc(100, 130, 100, 80, 0, -180); // Smile
+    }
+}

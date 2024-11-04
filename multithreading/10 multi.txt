@@ -1,0 +1,21 @@
+public class NamedPriorityThreadExample extends Thread {
+    public NamedPriorityThreadExample(String name) {
+        this.setName(name);
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Thread Name: " + this.getName() + ", Priority: " + this.getPriority());
+    }
+
+    public static void main(String[] args) {
+        NamedPriorityThreadExample thread1 = new NamedPriorityThreadExample("High Priority Thread");
+        NamedPriorityThreadExample thread2 = new NamedPriorityThreadExample("Low Priority Thread");
+
+        thread1.setPriority(Thread.MAX_PRIORITY);
+        thread2.setPriority(Thread.MIN_PRIORITY);
+
+        thread1.start();
+        thread2.start();
+    }
+}

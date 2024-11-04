@@ -1,0 +1,4 @@
+ // 17. Convert int to double
+        int intToDouble = 300;
+        double doubleFromInt = intToDouble; // implicit conversion
+        System.out.println("Int to double: " + doubleFromInt);

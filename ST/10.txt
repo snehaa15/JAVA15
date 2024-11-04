@@ -1,0 +1,23 @@
+class Str10 {
+    public static void main(String[] args) {
+        String str = "hello,world,java,programming";
+
+        // Split the string into an array using the comma as a delimiter
+        String[] strArray = str.split(",");
+
+        // Print out the string array
+        System.out.println("String array:");
+        for (String s : strArray) {
+            System.out.println(s);
+        }
+    }
+}
+
+OUTPUT
+
+
+String array:
+hello
+world
+java
+programming

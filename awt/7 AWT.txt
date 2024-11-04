@@ -1,0 +1,17 @@
+import java.awt.*;
+
+public class CheckboxCustomLayoutExample extends Frame {
+    public CheckboxCustomLayoutExample() {
+        setLayout(null);
+        Checkbox checkbox = new Checkbox("I agree");
+        checkbox.setBounds(100, 100, 100, 30);
+        add(checkbox);
+        
+        setSize(300, 200);
+        setVisible(true);
+    }
+
+    public static void main(String[] args) {
+        new CheckboxCustomLayoutExample();
+    }
+}

@@ -1,0 +1,155 @@
+class Account {
+    private String accountNumber;
+    private String customerName;
+    private double balance;
+
+    // Constructor
+    public Account(String accountNumber, String customerName, double balance) {
+        this.accountNumber = accountNumber;
+        this.customerName = customerName;
+        this.balance = balance;
+    }
+
+    // Getters
+    public String getAccountNumber() {
+        return accountNumber;
+    }
+
+    public String getCustomerName() {
+        return customerName;
+    }
+
+    public double getBalance() {
+        return balance;
+    }
+
+    // Method to deposit money
+    public void deposit(double amount) {
+        balance += amount;
+    }
+
+    // Method to withdraw money
+    public void withdraw(double amount) {
+        if (balance >= amount) {
+            balance -= amount;
+        } else {
+            System.out.println("Insufficient balance");
+        }
+    }
+
+    // Method to print account details
+    public void printAccountDetails() {
+        System.out.println("Account Number: " + accountNumber);
+        System.out.println("Customer Name: " + customerName);
+        System.out.println("Balance: $" + balance);
+    }
+}
+class Bank {
+    private Account[] accounts;
+    private int numAccounts;
+
+    // Constructor
+    public Bank(int capacity) {
+        accounts = new Account[capacity];
+        numAccounts = 0;
+    }
+
+    // Method to add an account
+    public void addAccount(Account account) {
+        if (numAccounts < accounts.length) {
+            accounts[numAccounts] = account;
+            numAccounts++;
+        } else {
+            System.out.println("Bank is full. Cannot add more accounts.");
+        }
+    }
+
+    // Method to remove an account
+    public void removeAccount(String accountNumber) {
+        for (int i = 0; i < numAccounts; i++) {
+            if (accounts[i].getAccountNumber().equals(accountNumber)) {
+                for (int j = i; j < numAccounts - 1; j++) {
+                    accounts[j] = accounts[j + 1];
+                }
+                numAccounts--;
+                return;
+            }
+        }
+        System.out.println("Account not found.");
+    }
+
+    // Method to print all account details
+    public void printAllAccountDetails() {
+        for (int i = 0; i < numAccounts; i++) {
+            accounts[i].printAccountDetails();
+            System.out.println();
+        }
+    }
+}
+
+ class E{
+    public static void main(String[] args) {
+        Bank bank = new Bank(5); // Create a bank with a capacity of 5 accounts
+
+        // Create some accounts
+        Account account1 = new Account("123456", "John Doe", 1000.0);
+        Account account2 = new Account("789012", "Jane Doe", 500.0);
+        Account account3 = new Account("345678", "Bob Smith", 2000.0);
+
+        // Add accounts to the bank
+        bank.addAccount(account1);
+        bank.addAccount(account2);
+        bank.addAccount(account3);
+
+        // Print all account details
+        bank.printAllAccountDetails();
+
+        // Deposit and withdraw money
+        account1.deposit(500.0);
+        account2.withdraw(200.0);
+
+        // Print updated account details
+        bank.printAllAccountDetails();
+
+        // Remove an account
+        bank.removeAccount("789012");
+
+        // Print all account details again
+        bank.printAllAccountDetails();
+    }
+}
+
+OUTPUT
+
+
+Account Number: 123456
+Customer Name: John Doe
+Balance: $1000.0
+
+Account Number: 789012
+Customer Name: Jane Doe
+Balance: $500.0
+
+Account Number: 345678
+Customer Name: Bob Smith
+Balance: $2000.0
+
+Account Number: 123456
+Customer Name: John Doe
+Balance: $1500.0
+
+Account Number: 789012
+Customer Name: Jane Doe
+Balance: $300.0
+
+Account Number: 345678
+Customer Name: Bob Smith
+Balance: $2000.0
+
+Account Number: 123456
+Customer Name: John Doe
+Balance: $1500.0
+
+Account Number: 345678
+Customer Name: Bob Smith
+Balance: $2000.0

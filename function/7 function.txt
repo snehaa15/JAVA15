@@ -1,0 +1,9 @@
+public static boolean isValidPassword(String password) {
+    return password.length() >= 8 &&
+           password.matches(".*\\d.*") &&
+           password.matches(".*[a-zA-Z].*") &&
+           password.matches(".*\\W.*");
+}
+
+// Example usage:
+System.out.println(isValidPassword("Passw0rd!")); // Output: true

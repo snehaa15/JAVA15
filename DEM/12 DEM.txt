@@ -1,0 +1,13 @@
+import javax.swing.*;
+
+public class NewFrameMessage {
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("Initial Frame");
+        JButton button = new JButton("Open New Frame");
+
+        button.addActionListener(e -> {
+            JFrame newFrame = new JFrame("New Frame");
+            JLabel label = new JLabel("This is a new frame!");
+            newFrame.add(label);
+            newFrame.setSize(300, 200);
+            newFrame.setVisible

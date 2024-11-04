@@ -1,0 +1,31 @@
+// Define the Animal interface
+interface Animal {
+    // Method to be implemented by classes that implement this interface
+    void bark();
+}
+
+// Define the Dog class that implements the Animal interface
+class Dog implements Animal {
+    // Implement the bark method for Dog
+    @Override
+    public void bark() {
+        System.out.println("Dog is barking");
+    }
+}
+
+// Main class to test the implementation
+class Main {
+    public static void main(String[] args) {
+        // Create an instance of Dog
+        Animal myDog = new Dog();
+        
+        // Call the bark method
+        myDog.bark();
+    }
+}
+
+
+OUTPUT
+
+
+Dog is barking
